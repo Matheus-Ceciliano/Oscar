@@ -1,0 +1,81 @@
+body {
+ background: radial-gradient(ellipse at center,#ffb20b, #000000 100%);
+    min-height: 130vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.oscar{
+  left: 400px;
+  min-height: 120px;
+  min-width: 400px;
+  position: relative;
+  margin-top: 200px;
+  bottom: 70px;
+  border-bottom: 2px solid #FFD700;
+}
+
+.info{
+   display: flex;
+  flex-wrap:wrap; /*Permite que os itens quebrem para a próxima linha se não couberem em uma única linha.*/
+  align-items: center;/*Alinha os itens verticalmente ao centro do container (no eixo cruzado — eixo Y, em um flex horizontal).*/
+  justify-content: center;
+  width: 100%;
+  min-width: auto;
+  max-width: 1000px;
+  min-height: 500px;
+  margin: auto;
+  padding: 24px 0;/*espaçamento interno*/
+  background: rgba(78, 77, 76, 0.349); 
+  border-radius: 15px;
+  transition: box-shadow 0.3s, background 0.3s;
+  gap: 32px;
+}
+.nomes{
+  position: absolute;
+  top: 330px;
+  left: 240px;
+  transform: translateX(-50%);
+  z-index: 10;/*controla a ordem de sobreposição*/
+  width: 120px; /* ajuste conforme necessário */
+  pointer-events: none;
+}
+
+.diretor {
+  position: relative;
+  display: flex;
+  flex-direction: column;/*ITENS organizados em coluna, um embaixo do outro*/
+  align-items: center;
+  
+}
+
+.premiados {
+  width: 270px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 8px rgba(0,0,0,0.3);
+}
+
+#legenda {
+  position: relative;
+  right: auto;
+  top: 15px;
+  bottom: 24px; /* ajuste conforme necessário */
+  background: rgba(0, 0, 0, 0.541);
+  color: rgba(255, 202, 26, 0.842);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  width: auto;
+  max-width: 90%;
+  pointer-events: none;
+  z-index: 2;
+}
+

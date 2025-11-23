@@ -1,0 +1,14 @@
+body {
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(145deg, #ffc800 , #fbca17,#514d48e0, #383837e0, #000000d6);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

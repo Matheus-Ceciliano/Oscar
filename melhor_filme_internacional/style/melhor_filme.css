@@ -1,0 +1,1227 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap');
+
+
+body {
+ 
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+ 
+  flex-direction: column;
+  overflow-x: hidden; 
+  color: white;
+  background: radial-gradient(ellipse at bottom right,#ffdd00,#ffb20b,#ffb20b,#ffb20b, #000000 95%);
+  background-size: 500% 500%;
+  animation:  15s ease infinite;
+  
+}
+
+
+.titulo{
+  color: white;
+  position: relative;
+  text-align: center;
+  left: 27%;
+  top:160px;
+  width: 50%;
+  border-bottom: 1px solid #ffcc00;
+}
+
+
+.linha-superior, .linha-inferior {
+  width:98.9vw;
+  left: 0;
+  height: 3px;
+  background-color: #be9241;
+  position: absolute;
+  left: 0;
+  
+}
+
+.linha-superior {
+  top: 0;
+}
+
+.linha-inferior {
+  bottom: 0;
+}
+
+.brilho-linha {
+  position: absolute; /* posicionar um elemento em relação ao seu ancestral*/
+  top: 0;
+ 
+  height: 100%;
+  width: 200%;
+  background: linear-gradient(120deg, transparent, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.linha-superior .brilho-linha {
+  left: 0;
+  animation: brilho-direita 5s linear infinite;
+}
+
+.linha-inferior .brilho-linha {
+  left: 0;
+  animation: brilho-esquerda 5s linear infinite;
+}
+
+
+
+.img_oscar {
+  width:450px;
+  max-width: 30%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  margin: 0;}
+
+.barra {
+ 
+  position: absolute; 
+  width: 100%; 
+  height: 125px;
+  background: linear-gradient(to bottom, #000000, #191919);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  top: 0; 
+  left: 0;
+  }
+
+  /*MODELO 3D*/
+model-viewer {
+  width: 60px;
+  height: 200px;
+  position: relative;
+  right: 150px;
+  
+  
+ 
+}
+
+
+
+
+.retangulo{
+  background: radial-gradient(ellipse at bottom left,#574104, #000000 40%);
+  height: 450px;
+  margin-left:  400px;
+  transition:  0.1s ease;
+  border-radius: 20px;
+  
+}
+
+.banner-container {
+  
+  margin-left: 70px;
+  margin-top: 240px;
+  width: 100px; /* Largura inicial (igual à da imagem) */
+  height:auto ;/* Altura inicial (ajustada pela imagem) */
+  position: relative; /* Para posicionar absolutamente a imagem e o vídeo */
+  cursor: pointer;/*O mouse quando passar se tranformarar num ponteiro*/
+  transition:  0.1s ease;
+}
+
+.banner-container:hover {
+  width: 1300px; /* Largura ao passar o mouse */
+  height: auto; /* Altura ao passar o mouse */
+
+}
+
+.banner-image{
+width: 300px;
+border-radius: 20px;
+
+}
+
+.banner-image, .banner-video {
+ 
+  object-fit: cover;/*preencha todo o espaço do contêiner sem distorção*/
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  transition:  2s ease;
+}
+
+.banner-image {
+  opacity: 1; /* Inicialmente visível */
+}
+
+
+
+.banner-video {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  left: 0;
+  transition:  51s ease 10s;
+  top: 85px;
+  border-radius: 20px;
+}
+
+.banner-container:hover .banner-image {
+
+  opacity: 0; /* Esconde a imagem ao passar o mouse */
+  transition:  0.9s ease;
+}
+
+.banner-container:hover .banner-video {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+  transition:  1s ease;
+}
+
+
+.texto {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  margin-left: 350px;
+  transition:  0.9s ease; 
+  top: 85px;
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #e7b900;
+  font-size: 30px;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}
+
+.banner-container:hover .texto {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+
+.texto_corpo {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  margin-left: 200px;
+  transition:  0.9s ease;
+  top: 85px;
+  border-radius: 20px;
+  font-family: 'EB Garamond';
+ 
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;/* retira o elemento do fluxo normal e o posiciona em relação ao 
+  ancestral posicionado mais próximo, usando top, right, bottom e left*/
+}
+
+.banner-container:hover .texto_corpo {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+.explicacao_oscar{
+  opacity: 1; /* Inicialmente visível */
+  position: relative;
+  left: 470px;
+  height: 450px;
+  top: 300px;
+  background: radial-gradient(ellipse at top right,#574104, #000000 40%);
+  width: 900px;
+  position:absolute;
+  border-radius: 20px;
+}
+
+.explicacao_texto{
+
+  width: 700px;
+  margin-left: 100px;
+  transition:  0.9s ease;
+  top: 70px;
+  border-radius: 30px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+
+
+
+}
+
+.explicacao_oscar h1{
+  position:absolute;
+  width: 700px;
+  margin-left: 100px;
+  transition:  0.9s ease; 
+
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #fbcd00;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*_parasita*/
+
+
+
+.retangulo_parasita{
+  background: radial-gradient(ellipse at bottom right,#574104, #000000 40%);
+  height: 435px;
+  margin-left:  400px;
+  transition:  0.9s ease;
+  border-radius: 20px;
+}
+
+.banner-container_parasita {
+ margin-left: 70px;
+  margin-top: 46px;
+  width: 100px; /* Largura inicial (igual à da imagem) */
+  height:auto ;/* Altura inicial (ajustada pela imagem) */
+  position: relative; /* Para posicionar absolutamente a imagem e o vídeo */
+  cursor: pointer;
+  transition:  0.1s ease;
+}
+
+.banner-container_parasita:hover {
+  width: 1300px; /* Largura ao passar o mouse */
+  height: auto; /* Altura ao passar o mouse */
+
+}
+
+.banner-image_parasita{
+width: 300px;
+border-radius: 20px;
+
+}
+
+.banner-image_parasita, .banner-video_parasita {
+ 
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  transition:  2s ease;
+}
+
+.banner-image_parasita {
+  opacity: 1; /* Inicialmente visível */
+}
+
+.banner-video_parasita {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  left: 0;
+  transition:  51s ease 10s;
+  top: 85px;
+  border-radius: 20px;
+}
+
+.banner-container_parasita:hover .banner-image_parasita {
+
+  opacity: 0; /* Esconde a imagem ao passar o mouse */
+  transition:  0.9s ease;
+}
+
+.banner-container_parasita:hover .banner-video_parasita {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+  transition:  1s ease;
+}
+
+
+.texto_parasita {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  margin-left: 400px;
+  transition:  0.9s ease; 
+
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #e7b900;
+  font-size: 30px;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}
+
+.banner-container_parasita:hover .texto_parasita {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+
+.texto_corpo_parasita {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 590px;
+  margin-left: 200px;
+  transition:  0.9s ease;
+  top: 20px;
+  border-radius: 20px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+}
+
+.banner-container_parasita:hover .texto_corpo_parasita {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+.explicacao_oscar_parasita{
+  opacity: 1; /* Inicialmente visível */
+  position: relative;
+  margin-left: 470px;
+  height: 430px;
+  margin-top: 50px;
+  background: radial-gradient(ellipse at bottom left,#574104, #000000 40%);
+  width: 900px;
+  position:absolute;
+  border-radius: 20px;
+}
+
+.explicacao_texto_parasita{
+
+  width: 740px;
+  margin-left: 120px;
+  transition:  0.9s ease;
+  top: 50px;
+  border-radius: 30px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+
+
+
+}
+
+.explicacao_oscar_parasita h1{
+  position:absolute;
+  width: 900px;
+  margin-left: 30px;
+  transition:  0.9s ease; 
+
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #fbcd00;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}   
+
+
+
+
+
+
+
+
+
+
+
+/*nomadland*/
+
+
+
+
+.retangulo_nomadland{
+  background: radial-gradient(ellipse at bottom right,#574104, #000000 40%);
+  height: 435px;
+  margin-left:  400px;
+  transition:  0.9s ease;
+  border-radius: 20px;
+}
+
+.banner-container_nomadland {
+ margin-left: 70px;
+  margin-top: 46px;
+  width: 100px; /* Largura inicial (igual à da imagem) */
+  height:auto ;/* Altura inicial (ajustada pela imagem) */
+  position: relative; /* Para posicionar absolutamente a imagem e o vídeo */
+  cursor: pointer;
+  transition:  0.1s ease;
+}
+
+.banner-container_nomadland:hover {
+  width: 1300px; /* Largura ao passar o mouse */
+  height: auto; /* Altura ao passar o mouse */
+
+}
+
+.banner-image_nomadland{
+width: 300px;
+border-radius: 20px;
+
+}
+
+.banner-image_nomadland, .banner-video_nomadland {
+ 
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  transition:  2s ease;
+}
+
+.banner-image_nomadland {
+  opacity: 1; /* Inicialmente visível */
+}
+
+.banner-video_nomadland {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  left: 0;
+  transition:  51s ease 10s;
+  top: 85px;
+  border-radius: 20px;
+}
+
+.banner-container_nomadland:hover .banner-image_nomadland {
+
+  opacity: 0; /* Esconde a imagem ao passar o mouse */
+  transition:  0.9s ease;
+}
+
+.banner-container_nomadland:hover .banner-video_nomadland {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+  transition:  1s ease;
+}
+
+
+.texto_nomadland {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  margin-left: 420px;
+  transition:  0.9s ease; 
+
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #e7b900;
+  font-size: 30px;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}
+
+.banner-container_nomadland:hover .texto_nomadland {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+
+.texto_corpo_nomadland {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 610px;
+  margin-left: 250px;
+  transition:  0.9s ease;
+  top: 20px;
+  border-radius: 20px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+}
+
+.banner-container_nomadland:hover .texto_corpo_nomadland {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+.explicacao_oscar_nomadland{
+  opacity: 1; /* Inicialmente visível */
+  position: relative;
+  margin-left: 470px;
+  height: 430px;
+  margin-top: 50px;
+  background: radial-gradient(ellipse at bottom left,#574104, #000000 40%);
+  width: 900px;
+  position:absolute;
+  border-radius: 20px;
+}
+
+.explicacao_texto_nomadland{
+
+  width: 590px;
+  margin-left: 200px;
+  transition:  0.9s ease;
+  top: 50px;
+  border-radius: 30px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+
+
+
+}
+
+.explicacao_oscar_nomadland h1{
+  position:absolute;
+  width: 900px;
+  margin-left: 80px;
+  transition:  0.9s ease; 
+
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #fbcd00;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}   
+/*FIM*/
+
+
+
+/*CODA*/
+.retangulo_coda{
+  background: radial-gradient(ellipse at bottom right,#574104, #000000 40%);
+  height: 435px;
+  margin-left:  400px;
+  transition:  0.9s ease;
+  border-radius: 20px;
+}
+
+.banner-container_coda {
+ margin-left: 70px;
+  margin-top: 46px;
+  width: 100px; /* Largura inicial (igual à da imagem) */
+  height:auto ;/* Altura inicial (ajustada pela imagem) */
+  position: relative; /* Para posicionar absolutamente a imagem e o vídeo */
+  cursor: pointer;
+  transition:  0.1s ease;
+}
+
+.banner-container_coda:hover {
+  width: 1300px; /* Largura ao passar o mouse */
+  height: auto; /* Altura ao passar o mouse */
+
+}
+
+.banner-image_coda{
+width: 300px;
+height: 430px;
+border-radius: 20px;
+
+}
+
+.banner-image_coda, .banner-video_coda {
+ 
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  transition:  2s ease;
+}
+
+.banner-image_coda {
+  opacity: 1; /* Inicialmente visível */
+}
+
+.banner-video_coda {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  left: 0;
+  transition:  51s ease 10s;
+  top: 85px;
+  border-radius: 20px;
+}
+
+.banner-container_coda:hover .banner-image_coda {
+
+  opacity: 0; /* Esconde a imagem ao passar o mouse */
+  transition:  0.9s ease;
+}
+
+.banner-container_coda:hover .banner-video_coda {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+  transition:  1s ease;
+}
+
+
+.texto_coda {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  margin-left: 370px;
+  transition:  0.9s ease; 
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #e7b900;
+  font-size: 30px;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}
+
+.banner-container_coda:hover .texto_coda {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+
+.texto_corpo_coda {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 610px;
+  margin-left: 250px;
+  transition:  0.9s ease;
+  top: 50px;
+  border-radius: 20px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+}
+
+.banner-container_coda:hover .texto_corpo_coda {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+.explicacao_oscar_coda{
+  opacity: 1; /* Inicialmente visível */
+  position: relative;
+  margin-left: 470px;
+  height: 430px;
+  margin-top: 50px;
+  background: radial-gradient(ellipse at bottom left,#574104, #000000 40%);
+  width: 900px;
+  position:absolute;
+  border-radius: 20px;
+}
+
+.explicacao_texto_coda{
+
+  width: 630px;
+  margin-left: 160px;
+  transition:  0.9s ease;
+  top: 50px;
+  border-radius: 30px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+
+
+
+}
+
+.explicacao_oscar_coda h1{
+  position:absolute;
+  width: 900px;
+  margin-left: 80px;
+  transition:  0.9s ease; 
+
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #fbcd00;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}   
+
+
+/*FIM*/
+
+
+/*tudo_todo*/
+
+
+
+.retangulo_tudo_todo{
+  background: radial-gradient(ellipse at bottom right,#574104, #000000 40%);
+  height: 435px;
+  margin-left:  400px;
+  transition:  0.9s ease;
+  border-radius: 20px;
+}
+
+.banner-container_tudo_todo {
+ margin-left: 70px;
+  margin-top: 46px;
+  width: 100px; /* Largura inicial (igual à da imagem) */
+  height:auto ;/* Altura inicial (ajustada pela imagem) */
+  position: relative; /* Para posicionar absolutamente a imagem e o vídeo */
+  cursor: pointer;
+  transition:  0.1s ease;
+}
+
+.banner-container_tudo_todo:hover {
+  width: 1300px; /* Largura ao passar o mouse */
+  height: auto; /* Altura ao passar o mouse */
+
+}
+
+.banner-image_tudo_todo{
+width: 300px;
+height: 430px;
+border-radius: 20px;
+
+}
+
+.banner-image_tudo_todo, .banner-video_tudo_todo {
+ 
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  transition:  2s ease;
+}
+
+.banner-image_tudo_todo {
+  opacity: 1; /* Inicialmente visível */
+}
+
+.banner-video_tudo_todo {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  left: 0;
+  transition:  51s ease 10s;
+  top: 85px;
+  border-radius: 20px;
+}
+
+.banner-container_tudo_todo:hover .banner-image_tudo_todo {
+
+  opacity: 0; /* Esconde a imagem ao passar o mouse */
+  transition:  0.9s ease;
+}
+
+.banner-container_tudo_todo:hover .banner-video_tudo_todo {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+  transition:  1s ease;
+}
+
+
+.texto_tudo_todo {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 590px;
+  margin-left: 250px;
+  transition:  0.9s ease; 
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #e7b900;
+  font-size: 30px;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}
+
+.banner-container_tudo_todo:hover .texto_tudo_todo {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+
+.texto_corpo_tudo_todo {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 630px;
+  margin-left: 250px;
+  transition:  0.9s ease;
+  top: 60px;
+  border-radius: 20px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; 
+  font-size: 22px;
+  position: absolute;
+}
+
+.banner-container_tudo_todo:hover .texto_corpo_tudo_todo {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+.explicacao_oscar_tudo_todo{
+  opacity: 1; /* Inicialmente visível */
+  position: relative;
+  margin-left: 470px;
+  height: 430px;
+  margin-top: 50px;
+  background: radial-gradient(ellipse at bottom left,#574104, #000000 40%);
+  width: 900px;
+  position:absolute;
+  border-radius: 20px;
+}
+
+.explicacao_texto_tudo_todo{
+
+  width: 730px;
+  margin-left: 160px;
+  transition:  0.9s ease;
+  top: 30px;
+  border-radius: 30px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+
+
+
+}
+
+.explicacao_texto_tudo_todo1{
+
+  width: 630px;
+  margin-left: 160px;
+  transition:  0.9s ease;
+  top: 120px;
+  border-radius: 30px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+}
+
+.explicacao_texto_tudo_todo2{
+
+  width: 730px;
+  margin-left: 150px;
+  transition:  0.9s ease;
+  top: 320px;
+  border-radius: 30px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+}
+
+.explicacao_oscar_tudo_todo h1{
+  position:absolute;
+  width: 900px;
+  margin-left: 20px;
+  transition:  0.9s ease; 
+
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #fbcd00;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}   
+
+/*FIM*/
+
+
+
+.retangulo_oppenheimer{
+  background: radial-gradient(ellipse at bottom right,#574104, #000000 40%);
+  height: 435px;
+  margin-left:  400px;
+  transition:  0.9s ease;
+  border-radius: 20px;
+}
+
+.banner-container_oppenheimer {
+ margin-left: 70px;
+  margin-top: 46px;
+  width: 100px; /* Largura inicial (igual à da imagem) */
+  height:auto ;/* Altura inicial (ajustada pela imagem) */
+  position: relative; /* Para posicionar absolutamente a imagem e o vídeo */
+  cursor: pointer;
+  transition:  0.1s ease;
+}
+
+.banner-container_oppenheimer:hover {
+  width: 1300px; /* Largura ao passar o mouse */
+  height: auto; /* Altura ao passar o mouse */
+
+}
+
+.banner-image_oppenheimer{
+width: 300px;
+height: 430px;
+border-radius: 20px;
+
+}
+
+.banner-image_oppenheimer, .banner-video_oppenheimer {
+ 
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  transition:  2s ease;
+}
+
+.banner-image_oppenheimer {
+  opacity: 1; /* Inicialmente visível */
+}
+
+.banner-video_oppenheimer {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  left: 0;
+  transition:  51s ease 10s;
+  top: 85px;
+  border-radius: 20px;
+}
+
+.banner-container_oppenheimer:hover .banner-image_oppenheimer {
+
+  opacity: 0; /* Esconde a imagem ao passar o mouse */
+  transition:  0.9s ease;
+}
+
+.banner-container_oppenheimer:hover .banner-video_oppenheimer {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+  transition:  1s ease;
+}
+
+
+.texto_oppenheimer {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 590px;
+  margin-left: 390px;
+  transition:  0.9s ease; 
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #e7b900;
+  font-size: 30px;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}
+
+.banner-container_oppenheimer:hover .texto_oppenheimer {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+
+.texto_corpo_oppenheimer {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 700px;
+  margin-left: 167px;
+  transition:  0.9s ease;
+  top: 60px;
+  border-radius: 20px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; 
+  font-size: 22px;
+  position: absolute;
+}
+
+.banner-container_oppenheimer:hover .texto_corpo_oppenheimer{
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+.explicacao_oscar_oppenheimer{
+  opacity: 1; /* Inicialmente visível */
+  position: relative;
+  margin-left: 470px;
+  height: 430px;
+  margin-top: 50px;
+  background: radial-gradient(ellipse at bottom left,#574104, #000000 40%);
+  width: 900px;
+  position:absolute;
+  border-radius: 20px;
+}
+
+.explicacao_texto_oppenheimer{
+
+  width: 730px;
+  margin-left: 130px;
+  transition:  0.9s ease;
+  top: 70px;
+  border-radius: 30px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+
+
+
+}
+
+.explicacao_oscar_oppenheimer h1{
+  position:absolute;
+  width: 900px;
+  margin-left: 25px;
+  transition:  0.9s ease; 
+
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #fbcd00;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}   
+
+
+
+/*FIM*/
+
+
+
+.retangulo_Anora {
+  background: radial-gradient(ellipse at bottom right,#574104, #000000 40%);
+  height: 435px;
+  margin-left:  400px;
+  transition:  0.9s ease;
+  border-radius: 20px;
+}
+
+.banner-container_Anora{
+ margin-left: 70px;
+  margin-top: 46px;
+  width: 100px; /* Largura inicial (igual à da imagem) */
+  height:auto ;/* Altura inicial (ajustada pela imagem) */
+  position: relative; /* Para posicionar absolutamente a imagem e o vídeo */
+  cursor: pointer;
+  transition:  0.1s ease;
+}
+
+.banner-container_Anora:hover {
+  width: 1300px; /* Largura ao passar o mouse */
+  height: auto; /* Altura ao passar o mouse */
+
+}
+
+.banner-image_Anora {
+width: 300px;
+height: 430px;
+border-radius: 20px;
+
+}
+
+.banner-image_Anora,.banner-video_Anora  {
+ 
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  transition:  2s ease;
+}
+
+.banner-image_Anora  {
+  opacity: 1; /* Inicialmente visível */
+}
+
+.banner-video_Anora  {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 550px;
+  left: 0;
+  transition:  51s ease 10s;
+  top: 85px;
+  border-radius: 20px;
+}
+
+.banner-container_Anora :hover .banner-image_Anora {
+
+  opacity: 0; /* Esconde a imagem ao passar o mouse */
+  transition:  0.9s ease;
+}
+
+.banner-container_Anora :hover .banner-video_Anora  {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+  transition:  1s ease;
+}
+
+
+.texto_Anora  {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 590px;
+  margin-left: 390px;
+  transition:  0.9s ease; 
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #e7b900;
+  font-size: 30px;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}
+
+.banner-container_Anora :hover .texto_Anora  {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+
+.texto_corpo_Anora  {
+  opacity: 0; /* Inicialmente invisível */
+  display: none; /* Inicialmente escondido */
+  width: 700px;
+  margin-left: 190px;
+  transition:  0.9s ease;
+  top: 30px;
+  border-radius: 20px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; 
+  font-size: 22px;
+  position: absolute;
+}
+
+.banner-container_Anora :hover .texto_corpo_Anora {
+  display: block; /* Exibe o vídeo ao passar o mouse */
+  opacity: 1; /* Torna o vídeo visível */
+}
+
+.explicacao_oscar_Anora {
+  opacity: 1; /* Inicialmente visível */
+  position: relative;
+  margin-left: 470px;
+  height: 430px;
+  margin-top: 50px;
+  background: radial-gradient(ellipse at bottom left,#574104, #000000 40%);
+  width: 900px;
+  position:absolute;
+  border-radius: 20px;
+}
+
+.explicacao_texto_Anora {
+
+  width: 860px;
+  margin-left: 3%;
+  transition:  0.9s ease;
+  top: 40px;
+  border-radius: 30px;
+  font-family: 'EB Garamond';
+  color: #fcfcfc;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+  font-size: 22px;
+  position: absolute;
+
+
+
+}
+
+.explicacao_oscar_Anora  h1{
+  position:absolute;
+  width: 900px;
+  margin-left: 100px;
+  transition:  0.9s ease; 
+
+  border-radius: 20px;
+  font-family: 'Playfair Display';
+  color: #fbcd00;
+  pointer-events: none; /* Garante que o texto não "capture" eventos de mouse */
+}   
+
+
+
+/*FIM*/

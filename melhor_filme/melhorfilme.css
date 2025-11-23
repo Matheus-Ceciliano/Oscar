@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse at bottom right,#ffdd00,#ffb20b,#ffb20b,#ffb20b, #000000 90%);
+  background-size: 500% 500%;
+ 
+}
+
+
+
+.linha-superior, .linha-inferior {
+  width: 100vw;
+  left: 0;
+  height: 3px;
+  background-color: #be9241;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+.linha-superior {
+  top: 0;
+}
+
+.linha-inferior {
+  bottom: 0;
+}
+
+.brilho-linha {
+  position: absolute;
+  top: 0;
+ 
+  height: 100%;
+  width: 200%;
+  background: linear-gradient(120deg, transparent, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.linha-superior .brilho-linha {
+  left: 0;
+  animation: brilho-direita 5s linear infinite;
+}
+
+.linha-inferior .brilho-linha {
+  left: 0;
+  animation: brilho-esquerda 5s linear infinite;
+}
+
+@keyframes brilho-direita {
+  0% { left: -20%; }
+  100% { left: 100%; }
+}
+
+@keyframes brilho-esquerda {
+  0% { left: 100%; }
+  100% { left: -20%; }
+}
+
+.img_oscar {
+  width:450px;
+  max-width: 30%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  margin: 0;}
+
+.barra {
+ 
+  position: absolute; 
+  width: 100%; 
+  height: 125px;
+  background: linear-gradient(to bottom, #000000, #191919);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  top: 0; 
+  left: 0;
+  }
+
+  /*MODELO 3D*/
+  model-viewer {
+  width: 60px;
+  max-width: 300px;
+  height: 200px;
+  background: #00000000;
+  position: relative;
+  right: 150px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0);
+  animation:  3s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes animation {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/*catalogo*/
+
+
+#catalogo{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  top: 200px;
+  padding-top: 20px;
+  background-color: rgba(255, 0, 0, 0);
+  min-height: 430px;
+  min-width: 700px;
+  justify-content: center;
+  gap: 30px;
+}
+
+#catalogo img {
+  height:320px;
+  width:210px;
+  transition: transform 0.3s ease;
+  overflow-y: hidden;
+}
+
+#catalogo img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+}
+
+.filmes{
+  position: relative;
+  max-height:430px;
+  max-width: 600px;
+  gap:32px;/*define um espaçamento de 32 pixels entre os itens internos de um container*/
+  background-color: rgba(0, 0, 0, 0);
+  align-items: center;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column; /* Alinha o texto e o botão verticalmente */
+    position: absolute;
+    gap: 10px;
+    max-width: 170px;
+    max-height: 120px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+  .descricao h2{
+    display: flex;/*; transforma a div em um flex container, container flexível).*/
+    position: relative;
+    margin: 0;
+    align-items: flex-end;
+    top: -5px;
+    color: #ffb20b;
+    letter-spacing: 2px;
+    
+  }
+
+  .descricao p{
+    bottom: 6px;
+    position: relative;
+    margin: 0;
+    display: flex;
+    color: #ffb20b;
+  
+  }
+
+  .trailer-btn {
+    display: flex;
+    align-items: center;
+    background-color: #ffcc00; /* Cor do botão */
+    border: none;
+    max-width: 60px;
+    margin: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: black;
+}
+
+.trailer-btn:hover {
+    background-color: #302f2d; /* Efeito ao passar o mouse */
+    transition: 0.3s ;
+}
+    
+.img-container {
+    width: 210px; /* Largura máxima */
+    height: 320px; /* Altura máxima */
+    overflow: hidden; /* Esconde partes da imagem que ultrapassam os limites */
+    display: inline-block; /* Para ajustar ao tamanho do conteúdo */
+}
+
+h1{
+  color: white;
+  position: relative;
+  text-align: center;
+  left: 27%;
+  top:160px;
+  width: 50%;
+  border-bottom: 1px solid #ffcc00;
+}

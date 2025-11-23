@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo 3D</title>
+    <link rel="stylesheet" href="/Css/modelo3d.css" />
+    <script src="https://threejs.org/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
+   <a href="/index.html" class="icon-back" title="Voltar">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </a>
+</head>
+<body>
+    
+
+
+   <div class="viewer-wrapper">
+      <model-viewer src="/scene.gltf" alt="Troféu 3D" auto-rotate rotation-per-second="30deg" exposure="1.9"
+        shadow-intensity="1"camera-controls >
+      </model-viewer>
+</body>
+</html>

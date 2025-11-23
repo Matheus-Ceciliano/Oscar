@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oscar 2025</title>
+
+  <link rel="stylesheet" href="./Css/index.css" />
+  <script src="https://threejs.org/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="/Script/script.js"></script>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+  <div class="brilho-topo"></div>
+  <div class="barra">
+
+    <img class="img_oscar" src="Imagem/Design sem nome.png" alt="Logo Oscar">
+
+    <div class="linha-superior">
+      <div class="brilho-linha"></div>
+    </div>
+
+    <div class="viewer-wrapper">
+      <model-viewer src="scene.gltf" alt="Troféu 3D" auto-rotate rotation-per-second="30deg" exposure="1.2"
+        shadow-intensity="1" disable-zoom environment-image="neutral" style="--poster-color: transparent;">
+      </model-viewer>
+    </div>
+  
+
+
+    <div class="linha-inferior">
+      <div class="brilho-linha"></div>
+    </div>
+
+    <!--modelo oscar e topo da pagina-->
+    <div class="brilho-base"></div>
+  </div>
+  
+  <!--carrossel-->
+  <div id="banner">
+  <div class="carrossel-wrapper">
+    <div class="carrossel-container">
+
+        <a href="/melhor_diretor/melhordiretor.html">
+        <div class="carrossel-menu ativo">
+        <img class="carrossel-item" src="/imagem_carrosel/melhor_diretor.png" alt="Melhor Diretor">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      </a>
+
+        <a href="/melhor_ator/melhorator.html">
+        <div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_ator.png" alt="Melhor Ator">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+        </a>
+        <a href="/melhor_atriz/melhoratriz.html">
+        <div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_atriz.png" alt="Melhor Atriz">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      </a>
+
+        <a href="/melhor_atorcoadju/melhoratorcoadjuvante.html">
+          <div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_ator_coadjuavante.png" alt="Melhor Ator Coadjuvante">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      </a>
+
+        <a href="/melhor_atrizcoadju/melhoratrizcoadjuvante.html">
+        <div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_atriz_cond.png" alt="Melhor Atriz Coadjuvante">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      </a>
+
+        <a href="/melhor_filme/melhorfilme.html">
+          <div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_filme.png" alt="Melhor Filme">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      </a>
+
+         <a href="/melhor_filme_internacional/melhro_filme.html">
+        <div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_filme_internacional.png" alt="Melhor Direção de Arte">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      </a>
+
+      <a href="/htmlsearch/melhor_animacao.html"><div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_animacao.png" alt="Melhor Animação">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      </a>
+     
+
+      <a href="/melhor_roteirooriginal/melhorroteirooriginal.html">
+        <div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_roteiro.png" alt="Melhor Roteiro Original">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+        </a>
+
+        <a href="/melhor_roteiroadaptado/melhoroteiroadaptado.html">
+        <div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_roteiro_adaptado.png" alt="Melhor Roteiro Adaptado">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+        </a>
+
+        <a href="/melhor_doc/melhordoc.html">
+        <div class="carrossel-menu">
+        <img src="/imagem_carrosel/melhor_doc.png" alt="Melhor Documentário">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      </a>
+
+     
+        
+        <div class="carrossel-menu duplicated">
+        <img class="carrossel-item" src="/imagem_carrosel/melhor_diretor.png" alt="Melhor Diretor (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+        
+      </div>
+
+        <a href="/htmlsearch/melhorator.html"></a>
+        <div class="carrossel-menu duplicated">
+        <img src="/imagem_carrosel/melhor_ator.png" alt="Melhor Ator (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+        
+      </div>
+
+        <a href="/htmlsearch/melhoratriz.html"></a>
+        <div class="carrossel-menu duplicated">
+        <img src="/imagem_carrosel/melhor_atriz.png" alt="Melhor Atriz (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+        
+      </div>
+
+        <a href="/htmlsearch/melhoratorcoadjuvante.html"></a>
+        <div class="carrossel-menu duplicated">
+        <img src="/imagem_carrosel/melhor_ator_coadjuavante.png" alt="Melhor Ator Coadjuvante (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+        
+      </div>
+
+        <a href="/htmlsearch/melhoratrizcoadjuvante.html"></a>
+        <div class="carrossel-menu duplicated">
+        <img src="/imagem_carrosel/melhor_atriz_cond.png" alt="Melhor Atriz Coadjuvante (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+        
+      </div>
+
+      <a href="/htmlsearch/melhorfilme.html"></a>
+        <div class="carrossel-menu duplicated">
+        <img src="/imagem_carrosel/melhor_filme.png" alt="Melhor Filme (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+        
+      </div>
+
+      
+
+      <a href="/htmlsearch/melhor_animacao.html"><div class="carrossel-menu duplicated">
+        <img src="/imagem_carrosel/melhor_animacao.png" alt="Melhor Animação (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      </a>
+
+      <a href="/htmlsearch/melhorroteirooriginal.html"></a><div class="carrossel-menu duplicated">
+        <img src="/imagem_carrosel/melhor_roteiro.png" alt="Melhor Roteiro Original (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+        
+      </div>
+
+      <a href="/htmlsearch/melhoroteiroadaptado.html"></a><div class="carrossel-menu duplicated">
+        <img src="/imagem_carrosel/melhor_roteiro_adaptado.png" alt="Melhor Roteiro Adaptado (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+        
+      </div>
+
+
+      <a href="/htmlsearch/melhordoc.html"></a><div class="carrossel-menu duplicated">
+        <img src="/imagem_carrosel/melhor_doc.png" alt="Melhor Documentário (Cópia)">
+        <img class="hover-img" src="/imagem_carrosel/oscar.png" alt="Oscar">
+      </div>
+      <!--carrossel-->
+
+    </div>
+  </div>
+</div>
+
+  
+    <!--modelo oscar e topo da pagina-->
+  
+   
+   </div>
+  <h2 class="titulo-destaque">Destaques & Notícias</h2>
+
+   <!--Destaques e noticias-->
+   <div class="caixa2">
+
+    <!--it was accident-->
+    <div class="caixa-transparente3">
+      <h2>"It Was Just an Accident"</h2>
+      <p>
+         De Jafar Panahi, consagra-se como o grande vencedor do Festival de Cannes 2025, recebendo a cobiçada Palma de Ouro.
+Em uma edição marcada por fortes emoções e obras de notável profundidade artística.
+      </p>
+    </div>
+    <img src="Imagem/justaccident.jpg" alt="Filme" class="itwas">
+     <!--it was accident-->
+
+   <!--young mother-->
+    <img src="Imagem/youngmother.jpg" alt="Filme" class="itwas">
+
+<div class="caixa-transparente4">
+      <h2>"The Young Mother's Home"</h2>
+      <p>
+         "The Young Mother's Home" é o melhor dos irmãos Dardenne em anos e "The Mastermind" fecha a competição com a melhor atuação da carreira de Josh O'Connor!
+      </p>
+    </div>
+    <!--young mother-->
+
+<!--Festival de Cannes 2025-->
+    <div class="caixa-transparente5">
+      <h2>"Festival de Cannes 2025"</h2>
+      <p>
+        "Woman and Child" coloca Parinaz Izadyar na disputa de Melhor Atriz e "Resurrection" ficou entre solonento e uma viagem que você precisa estar preparado!
+      </p>
+    </div>
+    <img src="Imagem/canes2025.webp" alt="Filme" class="itwas">
+<!--Festival de Cannes 2025-->
+
+<!--Sentimental Value-->
+    <img src="Imagem/sentimentalvalue.jpg" alt="Filme" class="itwas">
+
+<div class="caixa-transparente6">
+      <h2>""Sentimental Value""</h2>
+      <p>
+       "Sentimental Value" é um nome forte para a Palma de Ouro, "Romería" um filme muito bonito e "The History of Sound" conta com um ótimo Paul Mescal!
+      </p>
+    </div>
+<!--Sentimental Value-->
+
+<!--Anora-->
+<div class="caixa-transparente7">
+      <h2>"Anora & Parasita"</h2>
+      <p>
+       NEON, vencedora do Oscar por "Anora" e "Parasita", adquire os direitos norte-americanos de "O Agente Secreto", de Kleber Mendonça Filho!
+      </p>
+    </div>
+    <img src="Imagem/parasita_anora.jpg" alt="Filme" class="itwas">
+<!--Anora-->
+
+</div> 
+<!--Destaques e noticias-->
+
+<!--Historia e curiosidades-->
+<h2 class="titulo-destaque2">História</h2>
+
+<!--Historia-->
+<div class="caixa3">
+  <div class="containertexto">
+  <h2>Cedric Gibbons</h2>
+<p>A história do Oscar, oficialmente chamado de Academy Awards, remonta à sua fundação em 1927, quando a Academia de Artes e Ciências Cinematográficas foi criada com o objetivo de promover a indústria cinematográfica e premiar as melhores realizações no cinema. A primeira cerimônia aconteceu em 16 de maio de 1929, no Hollywood Roosevelt Hotel, com um jantar privado e sem transmissão ao público. Naquele ano, apenas 12 categorias foram contempladas, e os vencedores já eram conhecidos com antecedência.<img src="/Imagem/criadoroscar.avif" alt="Criador do Oscar" class="inline-image">A <a href="modelo3d.html" style="color: inherit; text-decoration: underline; cursor: pointer;">estatueta</a>, projetada por Cedric Gibbons e esculpida por George Stanley, é feita de bronze banhado a ouro, pesando cerca de 4 kg. Ela representa um cavaleiro segurando uma espada sobre um rolo de filme. O nome "Oscar" surgiu anos depois; uma das histórias populares é que a bibliotecária da Academia, Margaret Herrick, achava que a estatueta se parecia com seu tio Oscar, e o nome acabou sendo adotado informalmente.
+</p>
+</div>
+</div>
+<!--Historia-->
+
+<h2 class="titulo-destaque3">Criação</h2>
+
+<!--criação-->
+<div class="caixa4">
+  <div class="containertexto">
+  <h2>Louis B. Mayer</h2>
+<p>Louis B. Mayer, magnata da indústria cinematográfica e cofundador do estúdio Metro-Goldwyn-Mayer (MGM), foi o idealizador do Oscar, ou Academy Awards. Em 1927, Mayer concebeu a ideia de criar uma organização que promovesse a colaboração entre os profissionais do cinema e elevasse a reputação de Hollywood. Assim, nasceu a Academia de Artes e Ciências Cinematográficas, cujo principal propósito era reconhecer e premiar os maiores talentos da indústria. <img src="/Imagem/louisbmyer.jpg" alt="Criador do Oscar" class="inline-image2"> Sob sua liderança, foi concebida a icônica estatueta do Oscar, desenhada por Cedric Gibbons, diretor de arte da MGM, e esculpida por George Stanley. Mayer acreditava que um prêmio como esse incentivaria a excelência e unificaria os profissionais em torno de objetivos comuns. Sua visão consolidou o Oscar como o maior símbolo de prestígio e celebração do cinema mundial.
+</p>
+</div>
+</div>
+<!--criação-->
+
+ <h2 class="titulo-destaque">Curiosidades</h2>
+
+ <!--curiosidade-->
+<div class="caixa5">
+  <div class="curiosidade1">
+    <div>
+      <h2>Primeira Cerimônia</h2>
+      <img src="/Imagem/cerimonia.png" class="icones">
+      <p>
+        A primeira cerimônia do Oscar aconteceu em 16 de maio de 1929, no Hollywood Roosevelt Hotel, em Los Angeles. O evento foi um jantar privado com cerca de 270 convidados, sem transmissão ao público. Apenas 12 categorias foram premiadas, e os vencedores já eram conhecidos previamente, diferentemente do modelo atual.
+      </p>
+    </div>
+  </div>
+
+<div class="curiosidade2">  
+    <div>
+      <h2>Confusão</h2>
+      <img src="/Imagem/confusao.png"  class="icones">
+      <p>
+        A cerimônia de 2017 terminou de forma patética. Uma involuntária troca de envelopes fez com que Warren Beatty e Fay Dunaway anunciassem La La Land como melhor filme. Segundos depois, chegou o envelope correto, que apontava o verdadeiro vencedor: Moonlight.
+      </p>
+    </div>
+  </div>
+
+  <div class="curiosidade3">
+    <div>
+      <h2>Primeiro Oscar</h2>
+      <img src="Imagem/oscar.png" class="icones">
+      <p>
+       O primeiro Oscar da história foi entregue ao ator Emil Jannings, que estava de mudança para a Europa e, por isso, não compareceu à cerimônia, recebendo a estatueta com antecedência.
+
+      </p>
+    </div>
+  </div>
+
+  <div class="curiosidade4">
+    <img src="/Imagem/televisao.png" class="icones">
+    <div>
+      <h2>Televisão</h2>
+      <p>
+        A primeira transmissão do Oscar pela TV aconteceu em 1953 e apenas para os EUA - em 1966, o mundo todo começou a assistir.
+      </p>
+    </div>
+  </div>
+
+<div class="curiosidade5">  
+    <div>
+      <h2>Maior ganhador</h2>
+      <img src="/Imagem/ranking.png"  class="icones">
+      <p>
+       Walt Disney ainda é o principal vencedor, ao faturar 26 estatuetas, além de 59 indicações. O criador do Mickey também conseguiu o feito de ser indicado ao prêmio por 22 anos consecutivos.
+      </p>
+    </div>
+  </div>
+
+  <div class="curiosidade6">
+    <img src="/Imagem/conquista.png" class="icones">
+    <div>
+      <h2>Conquista</h2>
+      <p>
+       Fran Walsh foi a única mulher a ganhar 3 estatuetas diferentes na mesma edição do Oscar. Em 2004, ela recebeu os prêmios de Melhor Filme, Melhor Roteiro Adaptado e Melhor Canção Original por O Senhor dos Anéis - O Retorno do Rei.
+      </p>
+    </div>
+  </div>
+ </div>
+  <!--curiosidade-->
+
+ <div style="height: 42px;"></div>
+
+  <!--formulario-->
+<div class="formulario-container">
+        <div class="formulario">
+          <h1>Decida quem é o seu vencedor.</h1>
+        </div>
+      <div class="formulario2">
+              <div class="retangulo">
+                  <span class="texto1" data-content="filme">FILME</span>
+                  <span class="texto1" data-content="atores">ATORES</span>
+                  <span class="texto1" data-content="atrizes">ATRIZES</span>
+              </div>
+              <div id="contentDisplayDiv" class="content-display-area"></div>
+              </div>
+              <div id="consoleMessage"></div>
+      <div class="results-section"></div>
+      </div>
+      
+      <form id="someFormId">
+      <div class="movie-options">
+        </div>    
+      </form>
+<!--formulario-->
+
+
+<!--faq-->
+<div class="containerfaq">
+  
+<div class="containerfaq">
+  <div class="faq-container">
+    <h1 class="faq-title">Perguntas frequentes sobre a premiação Oscar</h1>
+    <div class="faq-item">
+      <button class="faq-question">
+        Quem pode votar no Oscar?
+        <span class="faq-icon">▼</span>
+      </button>
+      <div class="faq-answer">
+        Os membros da Academia de Artes e Ciências Cinematográficas (Academy of Motion Picture Arts and Sciences) votam no Oscar. A Academia é composta por profissionais da indústria cinematográfica, como atores, diretores, roteiristas e técnicos.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+         Quais são os critérios para um filme ser elegível ao Oscar?
+        <span class="faq-icon">▼</span>
+      </button>
+      <div class="faq-answer">
+        O filme precisa ter sido exibido em um cinema comercial de Los Angeles por pelo menos 7 dias consecutivos no ano anterior à premiação. Além disso, deve atender a critérios técnicos específicos, como duração mínima de 40 minutos.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Qual é a categoria mais importante do Oscar?
+        <span class="faq-icon">▼</span>
+      </button>
+      <div class="faq-answer">
+        A categoria "Melhor Filme" é geralmente considerada a mais prestigiada, pois homenageia o filme que mais se destacou em termos de produção, direção, roteiro e atuação.
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+<!--faq-->
+
+</body>
+
+
+
+
+<!--footer-->
+<footer>
+  <div class="quadrado">
+
+    <div id="texto1">
+    <div>
+      <h2>Celebre o cinema </h2>
+      <p>
+        Descubra tudo sobre a maior premiação do cinema mundial! Aqui, você encontra informações completas sobre os indicados, vencedores, curiosidades, e momentos marcantes da história do Oscar. Explore análises de filmes, entrevistas exclusivas com artistas e tendências da indústria cinematográfica.
+      </p>
+    </div>
+  </div>
+
+<div id="texto2">  
+
+    <div>
+      <h2>Se sinta a vontade</h2>
+      <p>
+       Feito para você, que ama cinema e os bastidores da maior premiação do mundo. Descubra indicados, vencedores, curiosidades e momentos inesquecíveis do Oscar. Compartilhe sua torcida, explore histórias incríveis e celebre a magia do cinema conosco
+      </p>
+    </div>
+  </div>
+
+  <div id="texto3">
+    <div>
+      <h2>E Por último</h2>
+      <p>
+      Continue explorando e descubra novidades, análises exclusivas, histórias inspiradoras e tudo o que faz do Oscar a maior celebração do cinema mundial!
+      </p>
+    </div>
+  </div>
+
+<img src="/Imagem/Design sem nome.png" class="inline-image">
+
+<div class="final">
+  <p>Sobre</p>
+  <p>Ajuda</p> 
+  <p>Legal</p>
+</div>
+
+<a href="https://www.instagram.com/irpgabriel/" target="_blank">  <img class="insta" src="/Imagem/Lovepik_com-380482604-instagram-social-flat-silhouette-icons-logo-the-sn-share-it.png" alt=""></a>
+</div>
+<!--footer-->
+
+</footer>
+
+</html>

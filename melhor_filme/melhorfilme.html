@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhor filme</title>
+    
+  <link rel="stylesheet" href="/melhor_filme/melhorfilme.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</head>
+<body>
+     <!--topo da pagina-->
+   <div class="brilho-topo">
+      <div class="barra">
+        <a href="/index.html"><img class="img_oscar" src="/Imagem/Design sem nome.png" alt=""></a>
+        <div class="linha-superior">
+      <div class="brilho-linha"></div>
+    </div>
+
+     <div class="viewer-wrapper">
+      <model-viewer src="/scene.gltf" alt="Troféu 3D" auto-rotate rotation-per-second="30deg" exposure="1.2"
+        shadow-intensity="1" disable-zoom environment-image="neutral" style="--poster-color: transparent;">
+      </model-viewer>
+    </div>
+
+    <div class="linha-inferior">
+      <div class="brilho-linha"></div>
+    </div>
+   </div>
+ </div>
+
+ <!--topo da pagina-->
+   
+      <h1>Melhores filmes nacionais indicados ao Oscar</h1>
+
+ <!--filmes-->
+      <div id="catalogo">
+          <div class="filmes">
+
+            <div class="img-container">
+               <img src="/melhor_filme/img/CidadedeDeus.jpg">
+               </div>
+
+               <div class="descricao">
+                  <h2>Cidade De Deus</h2>
+                  <p>Indicado ao Oscar</p>
+                  <button class="trailer-btn">Trailer</button>
+               </div>
+          </div>
+          
+          <div class="filmes">
+
+            <div class="img-container">
+               <img src="/melhor_filme/img/tropa-de-elite.jpg">
+               </div>
+
+                  <div class="descricao">
+                     <h2>Tropa De Elite</h2>
+                     <p>Indicado ao Oscar</p>
+                     <button class="trailer-btn">Trailer</button>
+
+                </div>
+          </div>
+
+          <div class="filmes">
+
+            <div class="img-container">
+               <img src="/melhor_filme/img/Ainda_estou_aqui.jpg">
+               </div>
+               <div class="descricao">
+                  <h2>Ainda Estou Aqui</h2>
+                  <p>Indicado ao Oscar</p>
+                  <button class="trailer-btn">Trailer</button>
+               </div>
+          </div>
+
+          <div class="filmes">
+
+             <div class="img-container">
+               <img src="/melhor_filme/img/saneamentobasico.jpg">
+               </div>
+               <div class="descricao">
+                  <h2>Saneamento Básico</h2>
+                  <p>Indicado ao Oscar</p>
+                  <button class="trailer-btn">Trailer</button>
+               </div>
+          </div>
+      </div>
+
+
+   <div style="height: 20px;"></div>
+</body>
+
+</html>
