@@ -1230,3 +1230,303 @@ h3 {
 .quadrado img{
   bottom: 20px;
 }
+
+
+
+/* ============================
+   RESPONSIVIDADE PARA CELULAR
+   ============================ */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+    font-size: 16px;
+  }
+
+  /* Barra topo */
+  .barra {
+    height: 80px;
+    padding: 0 16px;
+    justify-content: center;
+  }
+
+  .img_oscar {
+    position: static;
+    transform: none;
+    width: 140px;
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Títulos principais */
+  .titulo-destaque,
+  .titulo-destaque2,
+  .titulo-destaque3 {
+    font-size: 1.8rem;
+    margin: 16px 16px 8px 16px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  /* Imagem do topo/itwas */
+  .itwas {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  /* Caixas de texto gerais */
+  .caixa-transparente3,
+  .caixa-transparente4,
+  .caixa-transparente5,
+  .caixa-transparente6,
+  .caixa-transparente7 {
+    max-width: 100%;
+    margin: 16px auto;
+    padding: 16px 18px;
+    font-size: 1rem;
+  }
+
+  /* Containers principais em coluna */
+  .caixa2,
+  .caixa3,
+  .caixa4,
+  .caixa5,
+  .quadrado,
+  .containerfaq {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .caixa3,
+  .caixa4 {
+    margin: 16px;
+  }
+
+  .caixa3 h2,
+  .caixa4 h2 {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  /* Texto longo */
+  .containertexto {
+    padding: 16px;
+    margin: 16px;
+    font-size: 1rem;
+  }
+
+  /* Imagens inline viram blocos */
+  .inline-image,
+  .inline-image2 {
+    float: none;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 16px auto;
+  }
+
+  /* Banner / Carrossel */
+  #banner {
+    height: 200px;
+    padding: 10px;
+  }
+
+  .carrossel-container {
+    gap: 16px;
+  }
+
+  .carrossel-menu {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 16px;
+  }
+
+  /* Curiosidades: uma por linha */
+  .curiosidade1,
+  .curiosidade2,
+  .curiosidade3,
+  .curiosidade4,
+  .curiosidade5,
+  .curiosidade6 {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 16px;
+    flex-direction: column;
+  }
+
+  .curiosidade1 .icones,
+  .curiosidade2 .icones,
+  .curiosidade3 .icones,
+  .curiosidade4 .icones,
+  .curiosidade5 .icones,
+  .curiosidade6 .icones {
+    position: static;
+    margin-bottom: 8px;
+    align-self: flex-end;
+  }
+
+  /* Modelo 3D */
+  model-viewer {
+    max-width: 220px;
+    height: 180px;
+    margin: 10px auto;
+  }
+
+  /* FAQ */
+  .faq-title {
+    font-size: 2rem;
+    margin: 20px 16px 30px 16px;
+  }
+
+  .faq-container {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+
+  /* Formulário / votação */
+  .formulario {
+    position: static;
+    margin: 16px auto;
+    max-width: 100%;
+    transform: none !important;
+  }
+
+  .formulario2 {
+    position: static;
+    right: 0;
+    min-width: auto;
+    max-width: 100%;
+    max-height: none;
+    padding: 16px;
+    margin: 0 16px 24px 16px;
+    transform: none !important;
+  }
+
+  .formulario-container {
+    right: 0;
+    padding: 0;
+  }
+
+  .retangulo {
+    max-width: 100%;
+    padding: 0 16px;
+    justify-content: space-around;
+  }
+
+  .texto1, .texto2, .texto3 {
+    bottom: 0;
+    font-size: 0.85rem;
+  }
+
+  .voting-container-inner {
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  .movie-options {
+    grid-template-columns: 1fr; /* 1 filme por linha */
+    max-width: 100%;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .movie-card {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: 16px auto 0 auto;
+  }
+
+  .results-section {
+    padding: 0 16px 24px 16px;
+    text-align: center;
+  }
+
+  .results-section h2,
+  .results-section h3,
+  .results-section p {
+    margin-right: 0;
+  }
+
+  .results-section ul {
+    padding: 0;
+  }
+
+  .results-section li {
+    max-width: 100%;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+
+  /* Quadrado de textos finais */
+  #texto1, #texto2, #texto3 {
+    max-width: 100%;
+    padding: 12px 10px;
+    font-size: 0.95rem;
+  }
+
+  .final {
+    position: static;
+    left: 0;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  footer {
+    min-height: 220px;
+    padding: 16px;
+  }
+
+  .insta {
+    width: 26px;
+  }
+}
+
+/* Extra: telas muito pequenas */
+@media (max-width: 480px) {
+  .titulo-destaque,
+  .titulo-destaque2,
+  .titulo-destaque3 {
+    font-size: 1.5rem;
+  }
+
+  .faq-title {
+    font-size: 1.7rem;
+  }
+
+  .carrossel-menu {
+    width: 85%;
+  }
+
+  .movie-card {
+    max-width: 230px;
+  }
+}
