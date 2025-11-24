@@ -1534,3 +1534,42 @@ h3 {
     border-radius: 14px;
   }
 }
+
+/* ===== CABEÇALHO 100% DA TELA — MOBILE E DESKTOP ===== */
+header,
+.barra,
+#cabecalho,
+.topo,
+.navbar {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* O fundo do cabeçalho não pode “vazar” */
+.barra {
+  background: #000; /* coloque sua cor aqui */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo dentro do cabeçalho */
+.img_oscar {
+  max-width: 160px;          /* ajuste se quiser menor */
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+/* Remove QUALQUER elemento que “empurra” o header */
+header *,
+.barra * {
+  max-width: 100% !important;
+  overflow: hidden;
+}
