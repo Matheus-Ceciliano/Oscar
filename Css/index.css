@@ -1530,3 +1530,50 @@ h3 {
     max-width: 230px;
   }
 }
+
+/* ==== AJUSTE DO CARROSSEL PARA CELULAR ==== */
+@media (max-width: 768px) {
+
+  #banner {
+    height: auto;
+    padding: 12px 0;
+    display: block;
+  }
+
+  .carrossel-wrapper {
+    width: 100%;
+    overflow-x: auto;                 /* rolagem horizontal */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;    /* snap nos itens */
+  }
+
+  .carrossel-container {
+    display: flex;
+    gap: 16px;
+    width: auto;
+    padding: 0 16px 12px 16px;
+    animation: none !important;       /* tira animação infinita no cel */
+    transform: none !important;
+  }
+
+  .carrossel-menu {
+    flex: 0 0 80%;                    /* cada item ocupa ~80% da tela */
+    max-width: 80%;
+    scroll-snap-align: center;
+    border-radius: 16px;
+    margin: 0 auto;
+  }
+
+  .carrossel-menu img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+  }
+
+  /* No celular não faz sentido hover de imagem extra */
+  .carrossel-menu .hover-img {
+    display: none;
+  }
+}
+
