@@ -1232,9 +1232,8 @@ h3 {
 }
 
 
-
 /* ============================
-   RESPONSIVIDADE PARA CELULAR
+   RESPONSIVIDADE CELULAR
    ============================ */
 @media (max-width: 768px) {
 
@@ -1243,7 +1242,7 @@ h3 {
     font-size: 16px;
   }
 
-  /* Barra topo */
+  /* TOPO / LOGO */
   .barra {
     height: 80px;
     padding: 0 16px;
@@ -1259,7 +1258,7 @@ h3 {
     margin: 0 auto;
   }
 
-  /* Títulos principais */
+  /* TÍTULOS GRANDES */
   .titulo-destaque,
   .titulo-destaque2,
   .titulo-destaque3 {
@@ -1271,18 +1270,50 @@ h3 {
 
   h2 {
     font-size: 1.4rem;
-    text-align: left;
   }
 
-  /* Imagem do topo/itwas */
-  .itwas {
+  /* ---------- CARROSSEL DESTAQUES (BANNNER) ---------- */
+
+  #banner {
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
+    height: 260px;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
   }
 
-  /* Caixas de texto gerais */
+  .carrossel-wrapper {
+    width: 100%;
+    overflow: hidden;            /* sem scroll lateral */
+  }
+
+  .carrossel-container {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: deslizar 22s linear infinite;  /* volta a se mexer */
+  }
+
+  .carrossel-menu {
+    width: 75vw;                 /* ocupa ~75% da tela */
+    flex-shrink: 0;
+    margin-left: 16px;
+    border-radius: 20px;
+  }
+
+  .carrossel-menu img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .carrossel-menu .hover-img {
+    display: none; /* hover não faz sentido no touch */
+  }
+
+  /* CAIXAS DE TEXTO GERAIS (notícias, blocos) */
   .caixa-transparente3,
   .caixa-transparente4,
   .caixa-transparente5,
@@ -1294,7 +1325,7 @@ h3 {
     font-size: 1rem;
   }
 
-  /* Containers principais em coluna */
+  /* CONTAINERS EM COLUNA */
   .caixa2,
   .caixa3,
   .caixa4,
@@ -1308,26 +1339,49 @@ h3 {
     gap: 16px;
   }
 
-  .caixa3,
-  .caixa4 {
+  /* ---------- HISTÓRIA ---------- */
+
+  .caixa3 {
     margin: 16px;
+    border-radius: 18px;
   }
 
-  .caixa3 h2,
+  .caixa3 h2 {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .containertexto {
+    padding: 16px;
+    margin: 12px 16px 24px 16px;
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .inline-image {
+    float: none;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 16px auto;
+  }
+
+  /* ---------- CRIAÇÃO ---------- */
+
+  .caixa4 {
+    margin: 16px;
+    border-radius: 18px;
+  }
+
   .caixa4 h2 {
     margin-left: 0;
     text-align: left;
   }
 
-  /* Texto longo */
-  .containertexto {
-    padding: 16px;
-    margin: 16px;
-    font-size: 1rem;
+  .titulo-destaque3 {
+    margin: 24px 16px 12px 16px;
   }
 
-  /* Imagens inline viram blocos */
-  .inline-image,
   .inline-image2 {
     float: none;
     display: block;
@@ -1336,23 +1390,12 @@ h3 {
     margin: 16px auto;
   }
 
-  /* Banner / Carrossel */
-  #banner {
-    height: 200px;
-    padding: 10px;
+  /* ---------- CURIOSIDADES ---------- */
+
+  .caixa5 {
+    padding-top: 8px;
   }
 
-  .carrossel-container {
-    gap: 16px;
-  }
-
-  .carrossel-menu {
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 16px;
-  }
-
-  /* Curiosidades: uma por linha */
   .curiosidade1,
   .curiosidade2,
   .curiosidade3,
@@ -1360,9 +1403,20 @@ h3 {
   .curiosidade5,
   .curiosidade6 {
     max-width: 100%;
+    width: 100%;
     font-size: 1rem;
     padding: 16px;
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .curiosidade1 h2,
+  .curiosidade2 h2,
+  .curiosidade3 h2,
+  .curiosidade4 h2,
+  .curiosidade5 h2,
+  .curiosidade6 h2 {
+    padding: 0 0 6px 0;
   }
 
   .curiosidade1 .icones,
@@ -1376,17 +1430,11 @@ h3 {
     align-self: flex-end;
   }
 
-  /* Modelo 3D */
-  model-viewer {
-    max-width: 220px;
-    height: 180px;
-    margin: 10px auto;
-  }
+  /* ---------- FAQ ---------- */
 
-  /* FAQ */
   .faq-title {
     font-size: 2rem;
-    margin: 20px 16px 30px 16px;
+    margin: 24px 16px 30px 16px;
   }
 
   .faq-container {
@@ -1402,90 +1450,17 @@ h3 {
     font-size: 0.95rem;
   }
 
-  /* Formulário / votação */
-  .formulario {
-    position: static;
-    margin: 16px auto;
-    max-width: 100%;
-    transform: none !important;
-  }
+  /* ---------- ESCONDER VOTAÇÃO / "DECIDA QUEM É O MELHOR" NO CELULAR ---------- */
 
-  .formulario2 {
-    position: static;
-    right: 0;
-    min-width: auto;
-    max-width: 100%;
-    max-height: none;
-    padding: 16px;
-    margin: 0 16px 24px 16px;
-    transform: none !important;
-  }
-
-  .formulario-container {
-    right: 0;
-    padding: 0;
-  }
-
-  .retangulo {
-    max-width: 100%;
-    padding: 0 16px;
-    justify-content: space-around;
-  }
-
-  .texto1, .texto2, .texto3 {
-    bottom: 0;
-    font-size: 0.85rem;
-  }
-
-  .voting-container-inner {
-    width: 100%;
-    padding: 0 8px;
-  }
-
-  .movie-options {
-    grid-template-columns: 1fr; /* 1 filme por linha */
-    max-width: 100%;
-    margin-right: 0;
-    width: 100%;
-  }
-
-  .movie-card {
-    width: 100%;
-    max-width: 260px;
-  }
-
-  .movie-card img {
-    width: 100%;
-    height: auto;
-  }
-
-  button[type="submit"] {
-    display: block;
-    margin: 16px auto 0 auto;
-  }
-
+  .formulario,
+  .formulario2,
+  .voting-container-inner,
+  .retangulo,
   .results-section {
-    padding: 0 16px 24px 16px;
-    text-align: center;
+    display: none !important;
   }
 
-  .results-section h2,
-  .results-section h3,
-  .results-section p {
-    margin-right: 0;
-  }
-
-  .results-section ul {
-    padding: 0;
-  }
-
-  .results-section li {
-    max-width: 100%;
-    margin-left: 0;
-    justify-content: space-between;
-  }
-
-  /* Quadrado de textos finais */
+  /* QUADRADO FINAL DE TEXTOS */
   #texto1, #texto2, #texto3 {
     max-width: 100%;
     padding: 12px 10px;
@@ -1510,7 +1485,7 @@ h3 {
   }
 }
 
-/* Extra: telas muito pequenas */
+/* EXTRA: CELULAR MUITO PEQUENO */
 @media (max-width: 480px) {
   .titulo-destaque,
   .titulo-destaque2,
@@ -1523,57 +1498,6 @@ h3 {
   }
 
   .carrossel-menu {
-    width: 85%;
-  }
-
-  .movie-card {
-    max-width: 230px;
+    width: 82vw;
   }
 }
-
-/* ==== AJUSTE DO CARROSSEL PARA CELULAR ==== */
-@media (max-width: 768px) {
-
-  #banner {
-    height: auto;
-    padding: 12px 0;
-    display: block;
-  }
-
-  .carrossel-wrapper {
-    width: 100%;
-    overflow-x: auto;                 /* rolagem horizontal */
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;    /* snap nos itens */
-  }
-
-  .carrossel-container {
-    display: flex;
-    gap: 16px;
-    width: auto;
-    padding: 0 16px 12px 16px;
-    animation: none !important;       /* tira animação infinita no cel */
-    transform: none !important;
-  }
-
-  .carrossel-menu {
-    flex: 0 0 80%;                    /* cada item ocupa ~80% da tela */
-    max-width: 80%;
-    scroll-snap-align: center;
-    border-radius: 16px;
-    margin: 0 auto;
-  }
-
-  .carrossel-menu img {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    display: block;
-  }
-
-  /* No celular não faz sentido hover de imagem extra */
-  .carrossel-menu .hover-img {
-    display: none;
-  }
-}
-
