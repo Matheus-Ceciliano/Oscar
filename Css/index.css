@@ -1501,3 +1501,37 @@ h3 {
     width: 82vw;
   }
 }
+
+/* ===== AJUSTE FINO CARROSSEL NO CELULAR ===== */
+@media (max-width: 768px) {
+
+  #banner {
+    height: 200px;          /* área menor */
+    padding: 8px 0;
+    overflow: hidden;       /* nada passa da tela */
+    display: flex;
+    align-items: center;
+  }
+
+  .carrossel-wrapper {
+    width: 100%;
+  }
+
+  .carrossel-container {
+    gap: 12px;              /* menos espaço entre cards */
+  }
+
+  .carrossel-menu {
+    width: 65vw;            /* card bem menor que a tela */
+    max-width: 65vw;
+    border-radius: 14px;
+  }
+
+  .carrossel-menu img {
+    width: 100%;
+    height: 150px;          /* imagem mais baixa */
+    object-fit: cover;
+    border-radius: 14px;
+  }
+}
+
